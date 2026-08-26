@@ -72,7 +72,7 @@ async def chat(request: ChatRequest):
 
         # Call OpenAI API
         response = client.chat.completions.create(
-            model="gpt-4o-mopenai/gpt-oss-20b", 
+            model="openai/gpt-oss-20b", 
             messages=messages
         )
 
