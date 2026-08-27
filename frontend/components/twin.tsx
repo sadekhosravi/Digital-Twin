@@ -8,10 +8,10 @@ const skillGroups = [{ title: 'AI / LLM / Generative AI', items: ['LLMs', 'Agent
 const logoSkills = [{ name: 'Python', icon: 'python' }, { name: 'LangGraph', icon: 'langgraph' }, { name: 'LangChain', icon: 'langchain' }, { name: 'Hugging Face', icon: 'huggingface' }, { name: 'FAISS', icon: 'meta' }, { name: 'Neo4j', icon: 'neo4j' }, { name: 'PyTorch', icon: 'pytorch' }, { name: 'FastAPI', icon: 'fastapi' }, { name: 'SQL', icon: 'postgresql' }, { name: 'AWS', icon: 'amazonwebservices', cdn: 'https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/amazonwebservices.svg' }, { name: 'Docker', icon: 'docker' }, { name: 'GitHub Actions', icon: 'githubactions' }, { name: 'Terraform', icon: 'terraform' }, { name: 'Kubernetes', icon: 'kubernetes' }, { name: 'LiveKit', icon: 'livekit' }] as Array<{name:string;icon:string;cdn?:string}>
 
 const projects = [
-  { name: 'Steward', type: 'AI / Agent Systems', description: 'A thoughtful AI assistant designed to turn intent into useful action.', tags: ['Python', 'LLMs', 'Agents'], href: 'https://github.com/sadekhosravi/Steward' },
-  { name: 'Role Duty', type: 'Applied AI', description: 'Exploring how language models can make complex work more understandable.', tags: ['AI', 'Research', 'UX'], href: 'https://github.com/sadekhosravi/Role-Duty' },
-  { name: 'MediNote', type: 'Product Engineering', description: 'A focused full-stack product for making complex information clearer and more useful.', tags: ['Next.js', 'TypeScript', 'Postgres'], href: 'https://github.com/sadekhosravi/SaaS' },
-  { name: 'Digital Twin', type: 'Personal AI / Next.js', description: 'This living portfolio: a conversational interface for exploring my work, thinking, and curiosity.', tags: ['Next.js', 'AI', 'TypeScript'], href: 'https://github.com/sadekhosravi/Digital-Twin' },
+  { name: 'Steward', type: 'AI / Agent Systems', description: 'A customer service agent that can be trusted with the records. It serves customers under a company policy it must actually follow, and no action reaches the database that a second agent has not authorised. Evaluated against tau2-bench.', tags: ['Python', 'LLMs', 'Multy Agentic System', 'Harness'], href: 'https://github.com/sadekhosravi/Steward' },
+  { name: 'Role Duty', type: 'RAG Systems', description: 'An agentic RAG system that combines Chunkless RAG, Graph RAG, and a LangGraph multi-agent workflow to answer complex responsibility and escalation questions from organizational documents with grounded, verified citations.', tags: ['AI', 'Agentic RAG', 'Knowledge Graphs', 'MCP'], href: 'https://github.com/sadekhosravi/Role-Duty' },
+  { name: 'MediNote', type: 'Product Engineering', description: 'A production-focused AI SaaS application with authentication, subscription-based access, and streaming LLM responses, built with Next.js and FastAPI and deployed using Docker and AWS Lambda.', tags: ['Next.js', 'TypeScript', 'Postgres', 'AWS', 'Docker'], href: 'https://github.com/sadekhosravi/MediNote' },
+  { name: 'Digital Twin', type: 'Personal AI / Portfolio', description: 'An interactive portfolio website featuring a serverless Digital Twin AI agent with persistent memory. Built on AWS using S3, Lambda, API Gateway, and CloudFront for high performance and low-latency interaction.', tags: ['Next.js', 'AI', 'AWS', 'Portfolio'], href: 'https://github.com/sadekhosravi/Digital-Twin' },
 ]
 
 
@@ -54,7 +54,7 @@ export default function Twin() {
         setIsLoading(true);
 
         try {
-            const response = await fetch('http://localhost:8000/chat', {
+            const response = await fetch('https://https://q5o2zuj7z4.execute-api.eu-north-1.amazonaws.com/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
