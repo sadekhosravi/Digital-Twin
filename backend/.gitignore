@@ -221,3 +221,8 @@ __marimo__/
 
 #data
 data
+
+# lambda
+lambda-deployment.zip
+lambda-package/
+
